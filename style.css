@@ -1,0 +1,225 @@
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #f4f4f4; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 70px; /* Padding untuk memberi jarak antara header dan konten */
+    background-color: #fafafa;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1 i {
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar ul li button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+/* Layout styling */
+header, section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    text-indent: 1em;
+    margin-bottom: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+
+/* Untuk Handphone (Mobile) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 120px; /* Tambah padding agar tidak tertutup header */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        width: 100%;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .navbar ul li button {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header, section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+}
+
+/* Untuk Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        padding-top: 110px; /* Tambah padding agar tidak tertutup header */
+    }
+
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    header, section {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 16px;
+    }
+}
+
+/* Untuk PC (Desktop) */
+@media (min-width: 1025px) {
+    body {
+        padding-top: 70px; /* Tambah padding agar tidak tertutup header */
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar h1 {
+        font-size: 28px;
+    }
+
+    .navbar ul li button {
+        padding: 10px 15px;
+    }
+
+    header, section {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    th, td {
+        font-size: 18px;
+    }
+}
